@@ -1,0 +1,34 @@
+{
+  "name": "Evernote",
+  "description": "Web Evernote",
+  "version": "0.1",
+  "minimum_chrome_version": "30",
+  "author": [
+    {
+      "name": "Gustavo Guarda",
+      "email": "gustavoguarda@gmail.com"
+    }
+  ],
+  "app": {
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    }
+  },
+  "icons": { "16": "evernote-16.png", "128": "evernote-128.png" },
+  "permissions": [
+    "webview",
+    "audioCapture",
+    "videoCapture",
+    "storage",
+    "fullscreen"
+  ],
+  "webview": {
+    "partitions": [
+      {
+        "name": "evernote",
+        "accessible_resources": [""]
+      }
+    ]
+  }
+}
